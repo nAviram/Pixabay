@@ -1,0 +1,2 @@
+github "SDWebImage/SDWebImage" "5.13.5"
+github "SDWebImage/SDWebImageSwiftUI" "2.2.1"
