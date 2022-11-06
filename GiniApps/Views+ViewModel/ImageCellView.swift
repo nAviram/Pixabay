@@ -64,8 +64,6 @@ struct BubbleView : View{
 struct ImageViewCell_Previews: PreviewProvider {
     static var previews: some View {
         BubbleView(text: "Likes", number: 124)
-//
-//        Photo(context: viewContext)
-//        ImageCellView()
+
     }
 }

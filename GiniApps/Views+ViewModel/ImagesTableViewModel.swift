@@ -22,8 +22,7 @@ final class ImagesTableViewModel: ObservableObject {
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
@@ -31,23 +30,6 @@ final class ImagesTableViewModel: ObservableObject {
     }
 
     
-    /*
-     //Delete Photo:
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { allPhotos[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-     */
     
     private func populatePhoto(photo: Photo, With hit: Hit){
         photo.id = Int32(hit.id)
@@ -77,7 +59,7 @@ final class ImagesTableViewModel: ObservableObject {
     }
     
     func getHitsFromApiService() async {
-//        API-SERVICE - sends GET request
+        //API-SERVICE - sends GET request
         await apiService.getDataWith{ (result) in
             switch result {
                 case .Success(let response):
@@ -104,16 +86,13 @@ final class ImagesTableViewModel: ObservableObject {
                     do{
                         try self.viewContext.save()
                     }catch{
-                        print("ERROR: saving viewContent!")
+                        print("ERROR saving hit.id: \(hit.id)")
                     }
                 }
 
-                print("RESPONSE HITS:")
-                print(response.hits)
 
                 case .Error(let response):
-                //TODO: show error message
-                print(response)
+                 print("ERROR : " + response)
             }
         }
     }
