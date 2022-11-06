@@ -100,10 +100,10 @@
 		12AA6ACB2912780500E70E24 /* GiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				12AA6ACC2912780500E70E24 /* GiniAppsApp.swift */,
 				12F956AB2914824B00CA7FD6 /* DataModel */,
 				12AA6AE829127DBD00E70E24 /* Utilities */,
-				12AA6ACC2912780500E70E24 /* GiniAppsApp.swift */,
-				12F6B12029166D0A00CDED57 /* Views */,
+				12F6B12029166D0A00CDED57 /* Views+ViewModel */,
 				12AA6AD02912780600E70E24 /* Assets.xcassets */,
 				12AA6AD72912780600E70E24 /* GiniApps.xcdatamodeld */,
 				12238C012915FE6F0082380D /* Cartfile */,
@@ -130,7 +130,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		12F6B12029166D0A00CDED57 /* Views */ = {
+		12F6B12029166D0A00CDED57 /* Views+ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				12AA6ACE2912780500E70E24 /* ImagesTableView.swift */,
@@ -138,7 +138,7 @@
 				12AA6AEB29128A5F00E70E24 /* ImageCellView.swift */,
 				126E8144291694CA00D3149E /* ImageDetailsView.swift */,
 			);
-			path = Views;
+			path = "Views+ViewModel";
 			sourceTree = "<group>";
 		};
 		12F956AB2914824B00CA7FD6 /* DataModel */ = {

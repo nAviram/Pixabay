@@ -17,4 +17,6 @@ struct Constants{
     static let coreDataModelName = "GiniApps"
     static let coreDataURL = "/dev/null"
     
+    //API filtering params:
+    static let categoriesArray = ["all", "backgrounds", "fashion", "nature", "science", "education", "feelings", "health", "people", "religion", "places", "animals", "industry", "computer", "food", "sports", "transportation", "travel", "buildings", "business", "music"]
 }

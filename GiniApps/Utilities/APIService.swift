@@ -12,13 +12,10 @@ import CoreData
 
 class APIService {
 
-    let q = "blue+sky"
-
-//    lazy var endPoint: String = { return Constants.baseUrl + "?key=" + Constants.key  + "/q=\(self.q)" }()
-    //
-    
     lazy var endPoint: String = { return Constants.baseUrl + "?key=" + Constants.key + "&per_page=50" }()
 
+    //Params:
+//    let q = "blue+sky"
     
     func getDataWith(completion: @escaping (Result<ResponseModel>) -> Void) async {
         print(endPoint)

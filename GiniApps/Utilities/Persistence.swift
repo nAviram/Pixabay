@@ -13,21 +13,6 @@ struct PersistenceController {
     var viewContext: NSManagedObjectContext {
         return container.viewContext
     }
-    
-//    static var preview: PersistenceController = {
-//        let result = PersistenceController(inMemory: true)
-//        let viewContext = result.container.viewContext
-//
-//
-//        do {
-//            try viewContext.save()
-//        } catch {
-//            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//            let nsError = error as NSError
-//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//        }
-//        return result
-//    }()
 
     let container: NSPersistentContainer
 

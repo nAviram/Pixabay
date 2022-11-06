@@ -25,12 +25,11 @@ struct ImageDetailsView: View {
                 
                 WebImage(url: URL(string: photo.largeImageURL ?? ""), isAnimating: $isAnimating)
                 
-                //DEMO
+                // For Preview Demo - comment in this instead:
 //                HStackKeyValueText(key: "Image Views:", value: "1231221")//views
 //                HStackKeyValueText(key: "Downloads:", value: "33333") //downloads
 //                HStackKeyValueText(key: "Image Tags:", value: "blue, sky, white, ass") //tags
 //                HStackKeyValueText(key: "User Name:", value: "Aviram") //user name
-//
 //                WebImage(url: URL(string: Constants.baseUrl))
                 
                 // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
@@ -41,12 +40,11 @@ struct ImageDetailsView: View {
                 }
                 .resizable()
                 .placeholder(Image("Gini_BG")) // Placeholder Image
-                
                 .indicator(.activity) // Activity Indicator
                 .transition(.fade(duration: 0.5)) // Fade Transition with duration
                 .scaledToFit()
                 .frame(height: 300, alignment: .center)
-            
+                
                 Spacer()
                 
             }//VStack
@@ -90,6 +88,7 @@ struct HStackKeyValueText : View{
     }
 }
 
+//PREVIEW:
 //struct ImageDetailsView_Previews: PreviewProvider {
 //    static var previews: some View {
 ////        ImageDetailsView()

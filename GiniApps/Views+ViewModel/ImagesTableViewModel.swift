@@ -9,22 +9,10 @@ import SwiftUI
 
 final class ImagesTableViewModel: ObservableObject {
 
-//    @Environment(\.managedObjectContext) private var viewContext
-    
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \Photo.likes, ascending: false)],
-//        animation: .default)
-//    var photos: FetchedResults<Photo>
-    
     let apiService = APIService()
     let viewContext = PersistenceController.shared.viewContext
     
     @Published var allPhotos:[Photo] = PersistenceController.shared.fetchAllPhotos()
-
-//    init() {
-////        allPhotos = photos
-//        allPhotos =
-//    }
 
     private func addPhoto(hit : Hit) {
         withAnimation {
@@ -42,6 +30,9 @@ final class ImagesTableViewModel: ObservableObject {
         }
     }
 
+    
+    /*
+     //Delete Photo:
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { allPhotos[$0] }.forEach(viewContext.delete)
@@ -56,6 +47,7 @@ final class ImagesTableViewModel: ObservableObject {
             }
         }
     }
+     */
     
     private func populatePhoto(photo: Photo, With hit: Hit){
         photo.id = Int32(hit.id)

@@ -15,7 +15,6 @@ struct ImageCellView: View {
 
     var body: some View {
        
-        
         WebImage(url: URL(string: photo.previewURL ?? ""), isAnimating: $isAnimating)
         // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
         .onSuccess { image, data, cacheType in
@@ -42,35 +41,6 @@ struct ImageCellView: View {
                     .padding(.bottom,30)
             })
         
-        
-//        AsyncImage(
-//            url: URL(string: photo.previewURL ?? ""),
-//                content: { image in
-//                    image.resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(alignment: .center)
-//                        .overlay(alignment: .bottomLeading, content: {
-//                            BubbleView(text: "Likes: ", number: Int(photo.likes))
-//                                .padding(.leading,5)
-//                        })
-//
-//                        .overlay(alignment: .bottomTrailing, content: {
-//                            BubbleView(text: "Comments: ", number: Int(photo.comments))
-//                                .padding(.trailing,5)
-//                        })
-//                },
-//                placeholder: {
-//                    ZStack{
-//                        Image("Gini_BG").resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(alignment: .center)
-//                            .opacity(0.3)
-//                        ProgressView()
-//                            .frame(alignment: .center)
-//                            .aspectRatio(contentMode: .fit)
-//                    }
-//                }
-//            )
     }
 }
 
@@ -90,6 +60,7 @@ struct BubbleView : View{
     }
 }
 
+//PREVIEW:
 struct ImageViewCell_Previews: PreviewProvider {
     static var previews: some View {
         BubbleView(text: "Likes", number: 124)
